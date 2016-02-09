@@ -1,0 +1,256 @@
+/* Global Layout Set-up */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  color: #333;
+  background: #f5f5f5;
+}
+
+.wrapper {
+  margin: 0 10%;
+}
+/* Link Styles */
+
+a {
+  text-decoration: none;
+  color: #ccc;
+}
+a:hover {
+  color: #fff;
+}
+
+
+/* Navigation */
+
+header {
+  text-align: center;
+  background: url('images/header.jpg') no-repeat top center ;
+  background-size: cover;
+  color: #fff;
+  overflow: hidden;
+  line-height: 1.5;
+}
+
+.main-nav, .nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-nav {
+  padding-top: 2em;
+}
+
+.nav {
+  margin-top 1.5em;
+  padding: 0;
+  align-self: center;
+}
+
+.nav li {
+  list-style: none;
+}
+.nav li:hover {
+  border-color: #ccc;
+  transition: all .5s;
+}
+.nav a {
+  display: block;
+  background: #fff;
+  font-size: 1.1em;
+  font-weight: 200;
+  color: #555;
+  border-bottom: 1px solid #fff;
+  transition: all .5s;
+  margin: 2px auto;
+}
+.nav a:hover {
+  color: #999;
+}
+
+.name {
+  align-self: center;
+  font-size: 2em;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/* Header Content */
+
+header p {
+  font-size: 1.2em;
+}
+.profile-image {
+  margin-top: 50px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid white;
+  transition: fade 10s;
+  z-index: auto;
+}
+
+/* Main Content */
+
+.portfolio {
+  display: inline-block;
+  margin: 2.5%;
+  padding: 20px 40px;
+  max-width: 100%;
+  color: #555;
+  text-align: center;
+  vertical-align: top;
+}
+
+.portfolio img {
+  max-width: 100%;
+}
+
+/* Footer */
+
+footer {
+  background: #222 no-repeat bottom center ;
+  background-size: cover;
+  color: #fff;
+  padding-top: 50px;
+}
+
+footer ul {
+  list-style-type: none;
+}
+footer .nav {
+  display: none;
+  flex-direction: row;
+}
+footer .name {
+  font-size: 1em;
+  margin-right: auto;
+}
+
+.footer-top {
+  text-align: center;
+  line-height: 1.2em;
+  padding: 50px auto;
+}
+.footer-top a:link {
+  line-height: 3em;
+}
+
+.footer-bottom {
+  min-height: 50px;
+  display: flex;
+  flex-direction: row;
+  border-top: 2px solid #ccc;
+}
+
+.to-top {
+  display: flex;
+  margin: 20px 0 20px;
+}
+.clearfix {
+  clear: both;
+}
+
+/* Styles for tablet screens */
+@media screen and (min-width: 660px) {
+  .name {
+    border-bottom: 2px solid #eee;
+  }
+  .nav {
+    margin-top: 3em;
+    flex-direction: row;
+    margin-top: 0;
+    align-self: center;
+  }
+  .nav a {
+    background: none;
+    border: none;
+    color: #fff;
+    transition: all .5s;
+  }
+  .nav a:hover {
+    color: #eee;
+  }
+  .nav li {
+    margin: auto .5em;
+  }
+  header p {
+    text-align: left;
+    font-size: 1.5em;
+    margin: 5% 0;
+    width: 50%;
+  }
+  header .profile-image {
+    float: right;
+    width: 200px;
+    height: 200px;
+    margin: 5% auto;
+  }
+  .portfolio {
+    max-width: 45%;
+    float: left;
+  }
+  .to-top {
+    display: none;
+  }
+  .footer-bottom .nav {
+    display: flex;
+    flex-direction: row;
+  }
+  .footer-bottom .name {
+    border: none;
+    margin-right: auto;
+  }
+}
+
+/* Styles for desktop screens */
+@media screen and (min-width: 950px) {
+
+  header {
+    min-height: 470px;
+    line-height: 1.5;
+  }
+  .main-nav {
+    height: 200px;
+    justify-content: flex-end;
+    flex-direction: row;
+  }
+  .name {
+    display: block;
+    margin-right: auto;
+    border: none;
+  }
+
+  .nav a {
+    border-bottom-color: transparent;
+  }
+
+  header p {
+    font-size: 2em;
+    margin: 10% 0;
+    width: 50%;
+  }
+  header .profile-image {
+    float: right;
+    width: 300px;
+    height: 300px;
+    margin: 10% auto;
+  }
+  main {
+    padding-top: 20px;
+  }
+
+  main p {
+    line-height: 1.6em;
+  }
+
+  .portfolio {
+    max-width: 28.3333%;
+    float:left;
+  }
+}

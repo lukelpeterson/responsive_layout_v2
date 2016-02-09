@@ -47,7 +47,7 @@ header {
 }
 
 .nav {
-  margin-top 1.5em;
+  margin-top: 1.5em;
   padding: 0;
   align-self: center;
 }
@@ -89,7 +89,6 @@ header p {
   height: 150px;
   border-radius: 50%;
   border: 1px solid white;
-  transition: fade 10s;
   z-index: auto;
 }
 
@@ -133,7 +132,7 @@ footer .name {
 .footer-top {
   text-align: center;
   line-height: 1.2em;
-  padding: 50px auto;
+  padding: 50px 0;
 }
 .footer-top a:link {
   line-height: 3em;

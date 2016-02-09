@@ -61,16 +61,14 @@ header {
 }
 .nav a {
   display: block;
-  background: #fff;
   font-size: 1.1em;
   font-weight: 200;
-  color: #555;
-  border-bottom: 1px solid #fff;
+  color: #fff;
   transition: all .5s;
   margin: 2px auto;
 }
 .nav a:hover {
-  color: #999;
+  color: #ccc;
 }
 
 .name {
@@ -168,7 +166,6 @@ footer .name {
     align-self: center;
   }
   .nav a {
-    background: none;
     border: none;
     color: #fff;
     transition: all .5s;

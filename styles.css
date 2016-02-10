@@ -121,9 +121,10 @@ footer {
   padding-top: 50px;
 }
 
-footer ul {
-  list-style-type: none;
+footer li {
+  list-style: none;
 }
+
 footer .nav {
   display: none;
   flex-direction: row;
@@ -145,8 +146,10 @@ footer .name {
 .footer-bottom {
   min-height: 50px;
   display: flex;
-  flex-direction: row;
   border-top: 2px solid #ccc;
+}
+.footer-bottom ul {
+  display: flex;
 }
 
 .to-top {
@@ -191,6 +194,10 @@ footer .name {
     height: 200px;
     margin: 5% auto;
   }
+
+  footer {
+    flex-direction: row;
+  }
   .portfolio {
     max-width: 45%;
     float: left;
@@ -200,8 +207,9 @@ footer .name {
   }
   .footer-bottom .nav {
     display: flex;
-    flex-direction: row;
+    padding: 0 10px;
   }
+
   .footer-bottom .name {
     border: none;
     margin-right: auto;

@@ -1,0 +1,40 @@
+/* Main Content */
+
+main {
+
+
+  @media screen and (min-width: $break-large) {
+      padding-top: 20px;
+
+    p {
+      line-height: 1.6em;
+    }
+  }
+}
+.portfolio-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.portfolio {
+  margin: 2.5%;
+  padding: 20px 40px;
+  max-width: 100%;
+  color: $dark-color;
+  text-align: center;
+  vertical-align: top;
+
+  img {
+    max-width: 100%;
+  }
+  @media screen and (min-width: $break-small) {
+    max-width: 45%;
+  }
+  @media screen and (min-width: $break-large) {
+      max-width: 28.3333%;
+      margin: auto;
+  }
+}

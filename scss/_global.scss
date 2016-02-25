@@ -1,0 +1,26 @@
+/* Global Layout Set-up */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: $primary-font;
+  color: $dark-color;
+  background: $primary-color;
+}
+
+
+
+/* Link Styles */
+
+a {
+  text-decoration: none;
+  color: $secondary-color;
+}
+a:hover {
+  color: lighten($secondary-color, 10%);
+  transition: all .5s;
+}

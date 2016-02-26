@@ -1,31 +1,22 @@
 /* Main Content */
-
 main {
-
-
+  padding-top: 25px;
   @media screen and (min-width: $break-large) {
-      padding-top: 20px;
-
     p {
-      line-height: 1.6em;
+      line-height: $line-height;
     }
   }
 }
 .portfolio-wrapper {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
+  @include flex-container;
 }
 
 .portfolio {
+  @extend %text-center;
   margin: 2.5%;
   padding: 20px 40px;
   max-width: 100%;
   color: $dark-color;
-  text-align: center;
-  vertical-align: top;
 
   img {
     max-width: 100%;

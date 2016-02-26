@@ -1,6 +1,27 @@
+/* Variables */
 $break-small: 660px;
 $break-large: 950px;
 $primary-font: 'Raleway', sans-serif;
 $primary-color: #fff;
 $secondary-color: #ccc;
 $dark-color: #333;
+$line-height: 1.5;
+$font-size: 1em;
+$transition: all .5s;
+
+
+/* Mixins */
+%text-center {
+  text-align: center;
+}
+@mixin box($box-width, $box-height) {
+  width: $box-width;
+  height: $box-height;
+}
+@mixin flex-container($direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}

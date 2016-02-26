@@ -4,14 +4,11 @@
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  text-align: center;
+  @extend %text-center;
   font-family: $primary-font;
   color: $dark-color;
   background: $primary-color;
 }
-
 
 
 /* Link Styles */
@@ -22,5 +19,5 @@ a {
 }
 a:hover {
   color: lighten($secondary-color, 10%);
-  transition: all .5s;
+  transition: $transition;
 }

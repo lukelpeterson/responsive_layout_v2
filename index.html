@@ -4,14 +4,17 @@
   <meta charset="utf-8">
   <title>Luke Peterson</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="scss/styles.css">
   <link href='https://fonts.googleapis.com/css?family=Raleway:400,500,700,200' rel='stylesheet' type='text/css'></head>
   <body>
     <header id="#top">
       <div class="wrapper">
           <div class="main-nav">
+
             <a class="name" href="index.html">Luke Peterson</a>
-              <ul class="nav">
+            <a class="menu_button" href="#">&#9776;  MENU</a>
+              <ul class="nav" id="mobile_menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -19,7 +22,7 @@
           </div>
           <div class="header-content">
             <img src="images/profile-pic.jpg" alt="Luke Peterson" class="profile-image" />
-            <p>I'm a front-end developer from Seattle, WA.  I like coding, drinking coffee, and playing the drums.</p>   
+            <p>I'm a front-end developer from Seattle, WA.  I like coding, drinking coffee, and playing the drums.</p>
           </div>
 
       </div>
@@ -66,7 +69,7 @@
         </div>
     </main>
 
-    <footer class="clearfix" id="contact">
+    <footer id="contact">
       <div class="wrapper">
         <div class="footer-top">
           <h2>Contact</h2>
@@ -91,5 +94,7 @@
 
       </div>
     </footer>
+    <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="js/menu.js"></script>
   </body>
   </html>

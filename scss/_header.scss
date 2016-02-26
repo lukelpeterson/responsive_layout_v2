@@ -1,19 +1,11 @@
 /* Navigation & Header */
-
-@mixin box($box-width, $box-height) {
-  width: $box-width;
-  height: $box-height;
-}
-$line-height: 1.5;
-$font-size: 1em;
-
 header {
-  text-align: center;
+  @extend %text-center;
   background: linear-gradient(
               rgba(0, 0, 0, 0.5),
               rgba(0,0, 0, 0.9)
               ),
-              url(images/header.jpg);
+              url(header.jpg);
   background-size: cover;
   color: $primary-color;
   overflow: hidden;
@@ -33,112 +25,16 @@ header {
   }
 
   @media screen and (min-width: $break-large) {
-
       min-height: 470px;
       line-height: $line-height;
-
       p {
         font-size: $font-size * 2;
         margin: 10% 0;
         width: 50%;
       }
     }
-
 }
-.wrapper {
-  margin: 0 10%;
-}
-.header-content {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  @media screen and (min-width: $break-small) {
-    flex-direction: row;
-  }
-}
-.profile-image {
-  @include box(150px,150px);
-  margin-top: 50px;
-  border-radius: 50%;
-  border: 1px solid $primary-color;
-  z-index: auto;
-  @media screen and (min-width: $break-small){
-    @include box(225px,225px);
-    margin: 5% auto;
-  }
-  @media screen and (min-width: $break-large) {
-    @include box(300px,300px);
-    margin: 10% auto;
-  }
-}
-
-
-.main-nav {
-  display: flex;
-  flex-direction: column;
-  padding-top: 2em;
-
-  @media screen and (min-width: $break-large) {
-    height: 200px;
-    justify-content: flex-end;
-    flex-direction: row;
-  }
-}
-
-
-.nav {
-  display: flex;
-  flex-direction: column;
-  margin-top: 1.5em;
-  padding: 0;
-  align-self: center;
-
-  li {
-    list-style: none;
-  }
-  li:hover {
-    border-color: $secondary-color;
-    transition: all .5s;
-  }
-  a {
-    display: block;
-    font-size: $font-size;
-    font-weight: 200;
-    color: $primary-color;
-    transition: all .5s;
-    margin: 2px auto;
-  }
-  a:hover {
-    color: darken($primary-color, 20%);
-  }
-
-  @media screen and (min-width: $break-small) {
-      margin-top: 2em;
-      flex-direction: row;
-      align-self: center;
-
-      a {
-      border: none;
-      color: $primary-color;
-      transition: all .5s;
-    }
-    a:hover {
-      color: darken($primary-color, 20%);
-    }
-    li {
-      margin: auto .5em;
-    }
-  }
-
-  @media screen and (min-width: $break-large) {
-    a {
-      border-bottom-color: transparent;
-    }
-  }
-}
-
+/* Logo or Name */
 .name {
   align-self: center;
   font-size: $font-size * 2;
@@ -152,5 +48,100 @@ header {
       display: block;
       margin-right: auto;
       border: none;
+  }
+}
+/* Navigation */
+
+
+.main-nav {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2em;
+  @extend %text-center;
+
+  @media screen and (min-width: $break-large) {
+    height: 200px;
+    justify-content: flex-end;
+    flex-direction: row;
+  }
+}
+
+
+.nav {
+  @extend %text-center;
+  display: none;
+  flex-direction: column;
+  li {
+    list-style: none;
+  }
+  li:hover {
+    border-color: $secondary-color;
+    transition: all .5s;
+  }
+  a {
+    font-size: $font-size;
+    font-weight: 200;
+    color: $primary-color;
+    transition: all .5s;
+    margin: 2px auto;
+  }
+  a:hover {
+    color: darken($primary-color, 20%);
+  }
+
+  @media screen and (min-width: $break-small) {
+      margin: 10px auto;
+      flex-direction: row;
+      a {
+      border: none;
+      color: $primary-color;
+    }
+    a:hover {
+      color: darken($primary-color, 20%);
+    }
+    li {
+      margin: auto .5em;
+    }
+  }
+
+  @media screen and (min-width: $break-large) {
+    display: flex;
+    margin: 0;
+    a {
+      border-bottom-color: transparent;
+    }
+  }
+}
+/* Mobile Menu Button */
+.menu_button {
+  display: block;
+  @media screen and (min-width: $break-large) {
+    display: none;
+  }
+}
+
+/* Header Content */
+
+.wrapper {
+  margin: 0 10%;
+}
+.header-content {
+  @include flex-container($direction: column);
+  @media screen and (min-width: $break-small) {
+    flex-direction: row;
+  }
+}
+.profile-image {
+  @include box(150px,150px);
+  margin-top: 50px;
+  border-radius: 50%;
+  border: 1px solid $primary-color;
+  @media screen and (min-width: $break-small){
+    @include box(225px,225px);
+    margin: 5% auto;
+  }
+  @media screen and (min-width: $break-large) {
+    @include box(300px,300px);
+    margin: 10% auto;
   }
 }

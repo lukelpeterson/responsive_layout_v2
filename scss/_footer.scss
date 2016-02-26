@@ -4,44 +4,35 @@ footer {
   background: $dark-color no-repeat bottom center ;
   background-size: cover;
   color: $primary-color;
-  padding-top: 50px;
 
   li {
     list-style: none;
   }
   .name {
-    font-size: 1em;
+    font-size: $font-size;
     margin-right: auto;
-  }
-  @media screen and (min-width: $break-small) {
-    flex-direction: row;
   }
 }
 
 .footer-top {
-  text-align: center;
-  line-height: 1.2em;
-  padding: 50px 0;
+  line-height: $line-height;
+  padding: 25px 0;
 
   a:link {
-    line-height: 3em;
+    line-height: $line-height * 2;
   }
 }
 .footer-bottom {
+  @include flex-container;
   min-height: 50px;
-  display: flex;
   border-top: 2px solid $secondary-color;
 
-  ul {
-    display: flex;
-  }
   .nav {
     display: none;
   }
   @media screen and (min-width: $break-small) {
     .nav {
       display: flex;
-      margin-top: 1em;
       padding: 0 10px;
     }
     .name {
@@ -50,14 +41,10 @@ footer {
     }
   }
 }
-
 .to-top {
   display: flex;
   margin: 20px 0 20px;
   @media screen and (min-width: $break-small) {
     display: none;
   }
-}
-.clearfix {
-  clear: both;
 }
